@@ -1,3 +1,1 @@
-Kyselylomake.txt 
-Yksinkertainen kyselypohja
-Helposti muokattavissa
+Kyselylomake.txt yksinkertainen kyselypohja
