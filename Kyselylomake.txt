@@ -1,4 +1,4 @@
-** start of undefined **
+-HTML-
 
 <!DOCTYPE html>
 <html lang="fi">
@@ -59,11 +59,7 @@
 </body>
 </html>
 
-** end of undefined **
-
 -CSS-
-
-** start of undefined **
 
 /* Yleiset tyylit */
 body {
