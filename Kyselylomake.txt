@@ -1,0 +1,153 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kuntoilukysely</title>
+</head>
+<body>
+    <h1 id="title">Kuntoilukysely</h1>
+    <p id="description">Kuntoilukyselyn tarkoituksena on kartoittaa ihmisten liikuntatottumuksia. Kiitos, että käytit aikaa tämän täyttämiseen – arvostamme palautettasi.</p>
+
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Nimi</label>
+            <input id="name" name="name" type="text" required placeholder="Kirjoita nimesi">
+            
+            <label id="email-label" for="email">Sähköpostiosoite</label>
+            <input id="email" name="email" type="email" required placeholder="nimi@esimerkki.com">
+
+            <label id="number-label" for="number">Ikä</label>
+            <input type="number" id="number" name="number" min="13" max="120" placeholder="Ikä numeroina">
+
+            <label for="dropdown">Kuinka usein treenaat?</label>
+            <select id="dropdown" name="treenitiheys" required>
+                 <option value="" selected disabled>Valitse yksi vaihtoehdoista</option>
+                <option value="ei-koskaan">En treenaa</option>
+                <option value="1-2">1-2 kertaa viikossa</option>
+                <option value="3-4">3-4 kertaa viikossa</option>
+                <option value="5+">5+ kertaa viikossa</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mitä varten harjoittelet?</legend>
+            <label><input type="radio" name="harjoittelutyyppi" value="voima" checked> Voima</label>
+            <label><input type="radio" name="harjoittelutyyppi" value="voima+hypertrofia"> Voima + Hypertrofia</label>
+            <label><input type="radio" name="harjoittelutyyppi" value="hypertrofia"> Hypertrofia</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Minkä tyyppistä liikuntaa harrastat säännöllisesti?</legend>
+            <label><input type="checkbox" name="harjoittelumuoto" value="painonnosto"> Painonnosto</label>
+            <label><input type="checkbox" name="harjoittelumuoto" value="voimanosto"> Voimanosto</label>
+            <label><input type="checkbox" name="harjoittelumuoto" value="crossfit"> CrossFit</label>
+            <label><input type="checkbox" name="harjoittelumuoto" value="bjj"> BJJ</label>
+            <label><input type="checkbox" name="harjoittelumuoto" value="lenkkeily"> Lenkkeily</label>
+            <label><input type="checkbox" name="harjoittelumuoto" value="pyoraily"> Pyöräily</label>
+        </fieldset>
+        <fieldset>
+            <label for="comments">Mitä rakastat lajissasi?</label>
+            <textarea id="comments" placeholder="Kirjoita kommenttisi tähän"></textarea>
+        </fieldset>
+
+        <button id="submit" type="submit">Lähetä</button>
+    </form>
+</body>
+</html>
+
+** end of undefined **
+
+-CSS-
+
+** start of undefined **
+
+/* Yleiset tyylit */
+body {
+    font-family: Lato, Arial, sans-serif;
+    background-image: url("https://i.imgur.com/aFbcFpE.jpeg"); /* Taustakuva */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Otsikko ja kuvaus keskelle ja helposti luettavaksi */
+#title, #description {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+#description {
+    font-size: 1.2em; /* Mukautuu paremmin eri näyttökokoihin */
+}
+
+/* Lomakkeen asettelu */
+#survey-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+}
+
+/* Syöttökentät */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Tekstialue */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Radiopainikkeet ja checkboxit */
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Lähetä-painike */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+** end of undefined **
+
